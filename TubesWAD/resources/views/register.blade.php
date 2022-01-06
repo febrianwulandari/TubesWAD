@@ -75,7 +75,7 @@
   </div>
   <center>
   <button type="submit" class="btn btn-primary">Register Now</button>
-  <p style="margin-top: 7px;"> Already have an account? <a href="">Login</a></p>
+  <p style="margin-top: 7px;"> Already have an account? <a href="/login">Login</a></p>
   <br>
   </center>
 </form>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\layanan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,9 +26,7 @@ Route::get('/register', function () {
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/layanan', function () {
-    return view('layanan');
-});
+
 Route::get('/riwayat', function () {
     return view('riwayat');
 });
@@ -37,3 +36,8 @@ Route::get('/profile', function () {
 Route::get('/pelanggan', function () {
     return view('pelanggan');
 });
+
+Route::get('/layanan',[layanan::class, 'index']);
+Route::post('/layanan/add',[layanan::class, 'add']);
+Route::get('/layanan/viewadd',[layanan::class, 'viewAdd']);
+Route::get('/layanan/delete/{id}', [layanan::class, 'hapus']);

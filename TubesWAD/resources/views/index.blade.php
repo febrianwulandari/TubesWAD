@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-#E7FBFF;" style="background-color: #E7FBFF;">
   <div class="container-fluid">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="/home">
       <img src=" {{asset('asset/wools2.png')}}" alt="" width="40" height="45" class="d-inline-block align-text-top" style=" margin-left : 100px">
       <img src=" {{asset('asset/wools.png')}}" alt="" width="150" height="19" class="d-inline-block align-text-top" style="margin-top: 15px;">
     </a>
@@ -23,7 +23,7 @@
       <li><a href="/pelanggan" class="nav-link px-2 link-dark">Pelanggan</a></li>
       <li><a href="/riwayat" class="nav-link px-2 link-dark">Riwayat</a></li>
       <li><a href="/profile" class="nav-link px-2 link-dark">Profile</a></li>
-      <li><a href="/profile" type="button" class="btn btn-primary">Logout</a></li>
+      <li><a href="/profile" type="button" class="btn btn-primary" style="background-color: #01AFD0; margin-left: 20px; width: 150px">Logout</a></li>
     </ul>
     </div>
 </nav>
@@ -32,5 +32,62 @@
 @yield('konten')
 
 </section>
+<div class="footer" style="background-color: #038DA7;">
+  <div class="col-md-12">
+    <center>
+<br>
+    <h3 style="color:#E7FBFF">  Follow Our Social Media </h3>
+    <a class="navbar-brand" href="/home">
+      <a href ="https://www.instagram.com/"><img src=" {{asset('asset/ic1.png')}}" alt="" width="45" height="45" class="d-inline-block align-text-top"></a>
+      <a href ="https://www.linkedin.com/feed/"> <img src=" {{asset('asset/ic2.png')}}" alt="" width="45" height="45" class="d-inline-block align-text-top"  style="margin-left: 10px;"></a>
+      <a href ="https://www.facebook.com/home.php"><img src=" {{asset('asset/ic3.png')}}" alt="" width="45" height="45" class="d-inline-block align-text-top"  style="margin-left: 10px;"></a>
+      <a href ="https://web.whatsapp.com/"> <img src=" {{asset('asset/ic4.png')}}" alt="" width="45" height="45" class="d-inline-block align-text-top"  style="margin-left: 10px;"></a>
+    </a>
+    <br>
+    <hr style="background-color: #E7FBFF; width: 85%; height:2px">
+    </center>
+
+    <div class="row">
+      <div class="col-md-4">
+      <a class="navbar-brand" href="/home">
+      <img src=" {{asset('asset/wools2.png')}}" alt="" width="40" height="45" class="d-inline-block align-text-top" style=" margin-left : 100px">
+      <img src=" {{asset('asset/wools.png')}}" alt="" width="150" height="19" class="d-inline-block align-text-top" style="margin-top: 15px;">
+    </a>
+    <br>
+    <br>
+    <p style=" margin-left : 100px; color:#ffff"> 
+      Jln. Temuguruh, RT/ RW 03/02<br>
+      Karanganyar, Karangsari, Sempu
+      Banyuwangi, Jawa Timur
+    </p>
+    <br>
+      </div>
+      <div class="col-md-4" style="margin-left: 20px;">
+     
+   <h5 style="color: #ffff;">Contact Person</h5>
+    <br>
+    <br>
+    <p style=" color:#ffff"> 
+    
+    </p>
+    <br>
+      </div>
+      <div class="col-md-4">
+      <a class="navbar-brand" href="/home">
+      <img src=" {{asset('asset/wools2.png')}}" alt="" width="40" height="45" class="d-inline-block align-text-top" style=" margin-left : 100px">
+      <img src=" {{asset('asset/wools.png')}}" alt="" width="150" height="19" class="d-inline-block align-text-top" style="margin-top: 15px;">
+    </a>
+    <br>
+    <br>
+    <p style=" margin-left : 100px; color:#ffff"> 
+      Jln. Temuguruh, RT/ RW 03/02<br>
+      Karanganyar, Karangsari, Sempu
+      Banyuwangi, Jawa Timur
+    </p>
+    <br>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

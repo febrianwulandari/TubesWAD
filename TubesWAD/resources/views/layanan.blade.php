@@ -16,7 +16,22 @@
 
 <div class="col-md-10" style="margin-left: 20px;">
     <p style="color: #164D74;margin-top:20px; margin-left:90px; font-size:30px;font-weight:bold;">Data Layanan</p>
-    <a href="/layanan/viewadd"  style="margin-left: 90px; margin-bottom:10px" type="button" class="btn btn-success">+ Tambah Data</a>
+    <table>
+        <tr>
+            <td style="width: 1500px;">
+            <a href="/layanan/viewadd"  style="margin-left: 90px; margin-bottom:10px" type="button" class="btn btn-success">+ Tambah Data</a>
+            <form action="" method="GET">
+
+	</form>
+            </td>
+            <td style="width: 320px;">
+            <form action="" method="GET">
+                <input type="text" name="cari" placeholder="Cari Layanan .." value="">
+                <input class="btn btn-primary" type="submit" value="CARI">
+            </div>
+            </td>
+        </tr>
+    </table>
     <table class="table table-striped" style="background-color:#164D74;margin-left: 90px;">
         <thead>
             <tr>

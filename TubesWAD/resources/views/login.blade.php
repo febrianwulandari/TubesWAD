@@ -51,6 +51,12 @@
     <center>
     <br>
     <p style="color: #164D74; font-size:30px;font-weight: semibold; margin-top:60px">Login account</p>
+
+    @if(session()->has('success'))
+    <div class="alert alert-success" role="alert">
+        {{ session('success') }}
+    </div>
+    @endif
     </center>
     <form>
   <div class="mb-3" style="text-align: left;">

@@ -53,7 +53,9 @@ class register extends Controller
 
         $daftar->save();
 
-        return redirect('/login ')->with('sukses','Pendaftaran Berhasil');
+        $request->session()->flash('status', 'Registration Success!');
+
+        return redirect('/login');
     }
 
     /**

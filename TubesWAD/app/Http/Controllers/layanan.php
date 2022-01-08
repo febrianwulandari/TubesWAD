@@ -69,5 +69,44 @@ class layanan extends Controller
            
         }
 
+        public function viewedit($id){
+            $layanan = DB::table('layanans')->where('id',$id)->get();
+            return view('updateLayanan', [
+                'layanan' => $layanan]);
+        }
+    
+        public function update(Request $request){
+    
+            try{
+                $this->validate($request, [
+                    'id'   => 'required',
+                    'nama_layanan'   => 'required',
+                    'harga'   => 'required',
+                    'desc'   => 'required',
+                    'image' =>'required|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
+               
+                ]);
+        
+                $file = $request->file('image');
+                $nama_file = time()."_".$file->getClientOriginalName();
+                $tujuan_upload = 'asset';
+                $file->move($tujuan_upload,$nama_file);
+        
+        
+                DB::table('layanans')->where('id',$request->id)->update([
+                    'nama_layanan'             => $request->nama_layanan,
+                    'harga'            => $request->harga,
+                    'desc'      => $request->desc,
+                    'image'            => $nama_file
+                    ]);
+                    return redirect('/layanan')->with('sukses',' Data berhasil di update');
+    
+            }
+            catch(Exception $f){
+                return redirect('/layanan')->with('gagal',' Data tidak dapat diupdate');
+    
+            }
+          
+        }
     
 }

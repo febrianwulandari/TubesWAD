@@ -24,7 +24,7 @@
 <body  style="background-color: #E7FBFF;">
     <div class="col-md-11">
         <div class="row">
-        <div class="col-md-6" style="background-color: #FFFF; height:622px">
+        <div class="col-md-6" style="background-color: #FFFF; height:750px">
         <a class="navbar-brand" href="#">
         <img src=" {{asset('asset/wools2.png')}}" alt="" width="40" height="45" class="d-inline-block align-text-top" style=" margin-top:20px; margin-left : 50px">
         <img src=" {{asset('asset/wools.png')}}" alt="" width="150" height="19" class="d-inline-block align-text-top" style="margin-top: 30px;">
@@ -52,22 +52,27 @@
     <br>
     <p style="color: #164D74; font-size:30px;font-weight: semibold;">Create your free account</p>
     </center>
-    <form>
+    <form method="post" enctype="multipart/form-data" action="/register/add">
+      @csrf
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" id="exampleInputEmail1" name="nama" aria-describedby="emailHelp" required>
   </div>
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
   </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="alamat" required></textarea>
+</div>
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="password" class="form-control" id="exampleInputEmail1" name="password" aria-describedby="emailHelp" required>
   </div>
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
-    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
   </div>
   <div class="mb-3 form-check" style="text-align: left;">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">

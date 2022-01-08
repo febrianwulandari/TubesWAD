@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\layanan;
+use App\Http\Controllers\pelanggan;
+use App\Models\Mpelanggan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,11 +35,12 @@ Route::get('/riwayat', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
-Route::get('/pelanggan', function () {
-    return view('pelanggan');
-});
+
 
 Route::get('/layanan',[layanan::class, 'index']);
 Route::post('/layanan/add',[layanan::class, 'add']);
 Route::get('/layanan/viewadd',[layanan::class, 'viewAdd']);
 Route::get('/layanan/delete/{id}', [layanan::class, 'hapus']);
+Route::post('/layanan/update',[layanan::class, 'update']);
+Route::get('/layanan/viewedit/{id}',[layanan::class, 'viewedit']);
+Route::get('/pelanggan',[pelanggan::class, 'index']);

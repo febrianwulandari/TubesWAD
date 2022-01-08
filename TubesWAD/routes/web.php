@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\layanan;
 use App\Http\Controllers\register;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\pelanggan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +48,5 @@ Route::post('/register/add',[register::class, 'store']);
 Route::post('/layanan/update',[layanan::class, 'update']);
 Route::get('/layanan/viewedit/{id}',[layanan::class, 'viewedit']);
 Route::get('/pelanggan',[pelanggan::class, 'index']);
+
+Route::get('/login',[LoginController::class, 'index']);

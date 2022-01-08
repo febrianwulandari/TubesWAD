@@ -37,6 +37,14 @@ class register extends Controller
     public function store(Request $request)
     {
         //
+
+        $validated = $request->validate([
+            'nama' => 'required|max:255',
+            'email' => 'required|email',
+            'alamat' => 'required',
+            'password' => 'required|min:8|confirmed',
+        ]);
+
         $daftar = new Pelanggan();
         $daftar->nama_pelanggan = $request->nama;
         $daftar->email = $request->email;

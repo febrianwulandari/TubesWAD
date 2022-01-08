@@ -56,23 +56,23 @@
       @csrf
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" name="nama" aria-describedby="emailHelp" required>
+    <input type="text" class="form-control @error('nama') is-invalid @enderror" id="exampleInputEmail1" name="nama" aria-describedby="emailHelp" >
   </div>
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
+    <input type="email" class="form-control @error('email') is-invalid @enderror" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" >
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="alamat" required></textarea>
+    <textarea class="form-control @error('alamat') is-invalid @enderror" id="exampleFormControlTextarea1" rows="3" name="alamat"></textarea>
 </div>
   <div class="mb-3" style="text-align: left;">
-    <label for="exampleInputEmail1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputEmail1" name="password" aria-describedby="emailHelp" required>
+    <label for="exampleInputEmail1" class="form-label ">Password</label>
+    <input type="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputEmail1" name="password" aria-describedby="emailHelp" >
   </div>
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
-    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    <input type="password" class="form-control @error('password_confirmation') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" name="password_confirmation" >
   </div>
   <div class="mb-3 form-check" style="text-align: left;">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">

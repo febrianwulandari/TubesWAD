@@ -1,48 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
-use App\Models\pelanggan;
 
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class WebPelanggan extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        // $pelanggan = Pelanggan::all();
-
-        // return view('login', compact('pelanggan'));
-        return view('login');
-        
-    }
-
-    public function authenticate(Request $request)
-    {
-        $credentials = $request->validate([
-            'email' => 'required|email:dns',
-            'password' => 'required'
-        ]);
-
-        $users = Pelanggan::where('email', $request->email)->get(['password']);
-
-        // if(Auth::attempt($credentials)){
-            
-        if ($users[0]->password == $request->password){
-            $request->session()->put('email', $request->email);
-            $request->session()->regenerate();
-
-            return redirect()->intended('/homePelanggan');
+        $value = $request->session()->get('email');
+        if(isset($value) && !empty($value)){
+            return view('Pelanggan.IndexPelanggan');
         }
-        // }
-
-        return back()->with('loginErrors','Login Failed!');
+        
+        return redirect()->intended('/login');
     }
 
     /**

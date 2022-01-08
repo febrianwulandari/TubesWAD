@@ -40,7 +40,7 @@ class register extends Controller
 
         $validated = $request->validate([
             'nama' => 'required|max:255',
-            'email' => 'required|email',
+            'email' => 'required|email:rfc,dns',
             'alamat' => 'required',
             'password' => 'required|min:8|confirmed',
         ]);

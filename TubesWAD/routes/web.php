@@ -3,6 +3,7 @@
 use App\Http\Controllers\layanan;
 use App\Http\Controllers\register;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\WebPelanggan;
 use App\Http\Controllers\pelanggan;
 use Illuminate\Support\Facades\Route;
 
@@ -52,4 +53,7 @@ Route::post('/layanan/update',[layanan::class, 'update']);
 Route::get('/layanan/viewedit/{id}',[layanan::class, 'viewedit']);
 Route::get('/pelanggan',[pelanggan::class, 'index']);
 
-Route::get('/login',[LoginController::class, 'index']);
+Route::get('/login',[LoginController::class, 'index'])->middleware('guest');
+Route::post('/login',[LoginController::class, 'authenticate']);
+
+Route::get('/homePelanggan',[WebPelanggan::class, 'index']);

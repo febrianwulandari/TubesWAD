@@ -1,15 +1,16 @@
 @extends('index') 
 @section('title','Wools Laundry || Pelanggan') 
 @section('konten')
-@if (session('sukses'))
 <br>
-  <div class="alert-success"  style=" width: 85%; height: 50px; margin-left: 100px;">
+@if (session('sukses'))
+
+  <div class="alert-success"  style=" width: 83%; height: 50px; margin-left: 110px;">
     <p>{{ session('sukses') }}</p>
 </div>
   @endif
 
   @if (session('gagal'))
-  <div class="alert-danger"  style=" width: 75%; height: 50px; margin-left: 200px;">
+  <div class="alert-danger"  style=" width: 83%; height: 50px; margin-left: 110px;">
     <p>{{ session('gagal') }}</p>
   </div>
   @endif
@@ -18,7 +19,7 @@
 
 <div class="col-md-10" style="margin-left: 20px;">
     <p style="color: #164D74;margin-top:20px; margin-left:90px; font-size:30px;font-weight:bold;">Data Pelanggan</p>
-    <a href="/pelanggan/add"  style="margin-left: 90px; margin-bottom:10px" type="button" class="btn btn-success">+ Tambah Pelanggan</a>
+    <a href="/pelanggan/viewadd"  style="margin-left: 90px; margin-bottom:10px" type="button" class="btn btn-success">+ Tambah Pelanggan</a>
     <table class="table table-striped" style="background-color:#164D74;margin-left: 90px;">
         <thead>
             <tr>

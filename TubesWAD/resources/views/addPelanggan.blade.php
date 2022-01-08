@@ -2,29 +2,26 @@
 @section('title','Wools Laundry ||Tambah Pelanggan') 
 @section('konten')
 
-<h2 style="text-align: center; margin-top: 30px; color: rgb(8, 109, 109);">Input Data Layanan</h2>
+<h2 style="text-align: center; margin-top: 30px; color: rgb(8, 109, 109);">Input Data Pelanggan</h2>
 
 <center><div class="col-md-10" style="text-align: left;">
-<form action="/layanan/add" method="POST" enctype="multipart/form-data">
+<form action="/pelanggan/add" method="POST" enctype="multipart/form-data">
 @csrf
 <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Nama Layanan</label>
-  <input type="text" name="nama_layanan" class="form-control" id="exampleFormControlInput1" required>
+  <label for="exampleFormControlInput1" class="form-label">Nama Pelanggan</label>
+  <input type="text" name="nama_pelanggan" class="form-control" id="exampleFormControlInput1" required>
 </div>
 <div class="mb-3">
-    <label for="validationCustomUsername" class="form-label">Harga</label>
-    <div class="input-group has-validation">
-      <span class="input-group-text" id="inputGroupPrepend">Rp</span>
-      <input type="number" name="harga" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-    </div>
-  </div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-  <textarea name="desc" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+  <label for="exampleFormControlInput1" class="form-label">Email</label>
+  <input type="email" name="email" class="form-control" id="exampleFormControlInput1" required>
 </div>
 <div class="mb-3">
-  <label for="formFile" class="form-label">Image</label>
-  <input name="image" class="form-control" type="file" id="formFile" required>
+  <label for="exampleFormControlInput1" class="form-label">Password</label>
+  <input type="password" name="password" class="form-control" id="exampleFormControlInput1" required>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Alamat</label>
+  <input type="text" name="alamat" class="form-control" id="exampleFormControlInput1" required>
 </div>
 <div class="mb-3">
 <button type="submit" class="btn btn-primary"> Submit Data </button>

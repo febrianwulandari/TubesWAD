@@ -16,7 +16,7 @@ class WebPelanggan extends Controller
         //
         $value = $request->session()->get('email');
         if(isset($value) && !empty($value)){
-            return view('Pelanggan.IndexPelanggan');
+            return view('Pelanggan.homePelanggan');
         }
         
         return redirect()->intended('/login');

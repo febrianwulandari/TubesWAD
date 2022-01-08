@@ -49,7 +49,7 @@ class register extends Controller
         $daftar->nama_pelanggan = $request->nama;
         $daftar->email = $request->email;
         $daftar->alamat = $request->alamat;
-        $daftar->password = $request->password;
+        $daftar->password =$request->password;
 
         $daftar->save();
 

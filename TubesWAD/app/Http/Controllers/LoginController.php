@@ -45,6 +45,13 @@ class LoginController extends Controller
         return back()->with('loginErrors','Login Failed!');
     }
 
+    public function logout()
+        {   
+        Auth::logout();
+        return redirect()->intended('/login');
+        }
+
+
     /**
      * Show the form for creating a new resource.
      *

@@ -43,4 +43,3 @@ Route::get('/layanan/viewadd',[layanan::class, 'viewAdd']);
 Route::get('/layanan/delete/{id}', [layanan::class, 'hapus']);
 Route::post('/layanan/update',[layanan::class, 'update']);
 Route::get('/layanan/viewedit/{id}',[layanan::class, 'viewedit']);
-Route::get('/pelanggan',[pelanggan::class, 'index']);

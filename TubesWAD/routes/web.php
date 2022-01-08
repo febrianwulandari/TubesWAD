@@ -20,6 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/homePelanggan', function () {
+    return view('Pelanggan/IndexPelanggan');
+});
 Route::get('/home', function () {
     return view('home');
 });

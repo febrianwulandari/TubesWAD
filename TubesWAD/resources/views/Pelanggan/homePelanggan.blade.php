@@ -13,7 +13,7 @@
       Dry Cleaning
 </p>
 <p style="color: #164D74;margin-left:100px;font-weight:lighter;">Using modern technology to serve customers in order to provide the best laundry and dry cleaning services since 2021.</p>
-<a href="/homeLogin"  type="button" class="btn btn-warning" style="background-color: #D16F36; margin-left: 100px; color:#ffff; width: 160px">LEARN MORE</a>
+<a href="/homeLogin"  type="button" class="btn btn-warning" style="background-color: #D16F36; margin-left: 100px; color:#ffff; width: 160px">Learn More</a>
 </div>
   <div class="col-md-6">
   <img src=" {{asset('asset/icon.png')}}" alt=""  class="d-inline-block align-text-top" style=" margin-left : 100px; margin-bottom:100px">
@@ -47,6 +47,15 @@
   <br>
 </section>
 
+<section id="OurWork">
+<div class="col-md-12">
+<div class="row">
+  <p style="color: #164D74;font-size:40px; font-weight:bolder; text-align:center;margin-top:20px">How washted works🔥</p>
+  <p style="color: #164D74; font-size:18px; margin-bottom:80px;  text-align:center; font-weight:lighter;">The following is a laundry workflow</p>
+</div>
+</div>
+</section>
+
 <section id="howorder">
 <div class="col-md-12">
 <div class="row">
@@ -55,7 +64,7 @@
 </div>
   <div class="col-md-6">
  
-  <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:bolder; margin-top:30px">How to Order's ?
+  <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:bolder; margin-top:30px">Order Flow ?
 </p>
 <p style="color: #164D74;margin-left:100px;font-weight:lighter;">Here are the steps to order Wools Laundry services :</p>
 <table>

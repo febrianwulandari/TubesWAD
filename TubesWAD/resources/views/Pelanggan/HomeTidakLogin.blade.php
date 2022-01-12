@@ -1,4 +1,4 @@
-@extends('Pelanggan.Index') 
+@extends('Pelanggan.IndexPelanggan') 
 @section('title','Wools Laundry || Home Pelanggan') 
 @section('konten')
 
@@ -13,7 +13,7 @@
       Dry Cleaning
 </p>
 <p style="color: #164D74;margin-left:100px;font-weight:lighter;">Using modern technology to serve customers in order to provide the best laundry and dry cleaning services since 2021.</p>
-<a href="/homeLogin"  type="button" class="btn btn-warning" style="background-color: #D16F36; margin-left: 100px; color:#ffff; width: 160px">LEARN MORE</a>
+<a href="/homePelanggan"  type="button" class="btn btn-warning" style="background-color: #D16F36; margin-left: 100px; color:#ffff; width: 160px">LEARN MORE</a>
 </div>
   <div class="col-md-6">
   <img src=" {{asset('asset/icon.png')}}" alt=""  class="d-inline-block align-text-top" style=" margin-left : 100px; margin-bottom:100px">
@@ -93,7 +93,7 @@
   </tr>
 </table>
 <br>
-<a href="/layananPelanggan"  type="button" class="btn btn-primary" style="background-color:#72A4A5; margin-left: 100px; color:#ffff; width: 160px">Make an Order</a>
+<a href="/login"  type="button" class="btn btn-primary" style="background-color:#72A4A5; margin-left: 100px; color:#ffff; width: 160px">Make an Order</a>
 </div>
 </div>
 </div>
@@ -115,7 +115,7 @@
      <br>
      pick-up house to where the laundry is located
     </p>
-    <a href="/layananPelanggan"  type="button" class="btn btn-warning" style="background-color:#D16F36; margin-top:10px; margin-left: 100px; color:#ffff; width: 160px">Make an Order</a>
+    <a href="/login"  type="button" class="btn btn-warning" style="background-color:#D16F36; margin-top:10px; margin-left: 100px; color:#ffff; width: 160px">Make an Order</a>
   </div>
   <div class="col-md-4">
   <img src=" {{asset('asset/delivery.jpg')}}" alt="" width="90%"  class="d-inline-block align-text-top" style=" margin-bottom:100px">

@@ -9,7 +9,7 @@
 @csrf
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Nama Pelanggan</label>
-  <input type="text" name="nama_pelanggan" class="form-control" id="exampleFormControlInput1" required>
+  <input type="text" name="name" class="form-control" id="exampleFormControlInput1" required>
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email</label>
@@ -18,10 +18,6 @@
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Password</label>
   <input type="password" name="password" class="form-control" id="exampleFormControlInput1" required>
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Alamat</label>
-  <input type="text" name="alamat" class="form-control" id="exampleFormControlInput1" required>
 </div>
 <div class="mb-3">
 <button type="submit" class="btn btn-primary"> Submit Data </button>

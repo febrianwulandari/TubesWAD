@@ -21,15 +21,6 @@
         <tr>
             <td style="width: 1500px;">
             <a href="/layanan/viewadd"  style="margin-left: 90px; margin-bottom:10px" type="button" class="btn btn-success">+ Tambah Layanan</a>
-            <form action="" method="GET">
-
-	</form>
-            </td>
-            <td style="width: 320px;">
-            <form action="" method="GET">
-                <input type="text" name="cari" placeholder="Cari Layanan .." value="">
-                <input class="btn btn-primary" type="submit" value="CARI">
-            </div>
             </td>
         </tr>
     </table>
@@ -55,8 +46,8 @@
                 <td class="table-light  table-striped"><img src="/asset/{{$layan->image}}" class="card-img-top" height="100px" alt="..."></td>
                 <td class="table-light  table-striped">
                     <center>
-                    <a href="/layanan/delete/{{$layan->id}}" type="button" class="btn btn-danger">Delete</a>
                     <a href="/layanan/viewedit/{{$layan->id}}" type="button" class="btn btn-warning">Update</a>
+                    <a href="/layanan/delete/{{$layan->id}}" type="button" class="btn btn-danger">Delete</a>
                     </center>
                 </td>
 

@@ -10,16 +10,24 @@ use Illuminate\Support\Facades\DB;
 
 class layanan extends Controller
 {
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    //     $this->ModelLayanan = new ModelsLayanan();
+    // }
     public function index()
     {
         $layanan = ModelsLayanan::all();
         return view('layanan', [
+            'active' =>  'layanan',
             'layanan' => $layanan]);
     }
 
     public function viewAdd()
     {
-        return view('addLayanan');
+        return view('addLayanan',[
+            'active' =>  'layanan',
+        ]);
     }
 
     public function add(Request $request)
@@ -72,6 +80,7 @@ class layanan extends Controller
         public function viewedit($id){
             $layanan = DB::table('layanans')->where('id',$id)->get();
             return view('updateLayanan', [
+                'active' =>  'layanan',
                 'layanan' => $layanan]);
         }
     

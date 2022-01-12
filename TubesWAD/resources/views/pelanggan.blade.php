@@ -27,7 +27,6 @@
                 <th scope="col" style="color: #FFFFFF;">Nama Pelanggan</th>
                 <th scope="col" style="color: #FFFFFF;">Email</th>
                 <th scope="col" style="color: #FFFFFF;">Password</th>
-                <th scope="col" style="color: #FFFFFF;">Alamat</th>
                 <th scope="col" style="color: #FFFFFF;  text-align:center">Action</th>
             </tr>
         </thead>
@@ -36,14 +35,12 @@
         <tbody>
             <tr>
                 <th class="table-light  table-striped" scope="row">{{$no++}}</th>
-                <td class="table-light  table-striped">{{ $pel->nama_pelanggan}}</td>
+                <td class="table-light  table-striped">{{ $pel->name}}</td>
                 <td class="table-light table-striped">{{ $pel->email}}</td>
                 <td class="table-light  table-striped">{{ $pel->password}}</td>
-                <td class="table-light  table-striped">{{ $pel->alamat}}</td>
                 <td class="table-light  table-striped">
                     <center>
                     <a href="/pelanggan/delete/{{$pel->id}}" type="button" class="btn btn-danger">Delete</a>
-                    <a href="/pelanggan/viewedit/{{$pel->id}}" type="button" class="btn btn-warning">Update</a>
                     </center>
                 </td>
 

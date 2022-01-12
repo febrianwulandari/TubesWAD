@@ -52,13 +52,13 @@
     <br>
     <p style="color: #164D74; font-size:30px;font-weight: semibold;">Create your free account</p>
     </center>
-    <form method="post" enctype="multipart/form-data" action="/register/add">
+    <form method="POST" action="{{ route('register') }}">
       @csrf
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="text" class="form-control @error('nama') is-invalid @enderror" id="exampleInputEmail1" name="nama" aria-describedby="emailHelp" >
+    <input type="text" class="form-control @error('name') is-invalid @enderror" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" >
     
-    @error('nama')
+    @error('name')
     <div class="invalid-feedback">
       {{ $message }}
     </div>
@@ -75,16 +75,6 @@
     </div>
     @enderror
   </div>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
-    <textarea class="form-control @error('alamat') is-invalid @enderror" id="exampleFormControlTextarea1" rows="3" name="alamat"></textarea>
-
-    @error('alamat')
-    <div class="invalid-feedback">
-      {{ $message }}
-    </div>
-    @enderror
-</div>
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label ">Password</label>
     <input type="password" class="form-control @error('password') is-invalid @enderror" id="exampleInputEmail1" name="password" aria-describedby="emailHelp" >

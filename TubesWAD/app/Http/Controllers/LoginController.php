@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
+use App\Providers\RouteServiceProvider;
 use App\Models\pelanggan;
 
 use Illuminate\Http\Request;
@@ -23,6 +24,8 @@ class LoginController extends Controller
         
     }
 
+    protected $redirectTo = RouteServiceProvider::HOME;
+
     public function authenticate(Request $request)
     {
         $credentials = $request->validate([
@@ -38,7 +41,7 @@ class LoginController extends Controller
             $request->session()->put('email', $request->email);
             $request->session()->regenerate();
 
-            return redirect()->intended('/homePelanggan');
+            return redirect()->intended('/homeLogin');
         }
         // }
 

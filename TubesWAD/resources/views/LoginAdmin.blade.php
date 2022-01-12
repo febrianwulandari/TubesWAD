@@ -50,7 +50,7 @@
     <br>
     <center>
     <br>
-    <p style="color: #164D74; font-size:30px;font-weight: semibold; margin-top:60px">Login Pelanggan</p>
+    <p style="color: #164D74; font-size:30px;font-weight: semibold; margin-top:60px">Login Admin</p>
 
     @if(session()->has('success'))
     <div class="alert alert-success" role="alert">

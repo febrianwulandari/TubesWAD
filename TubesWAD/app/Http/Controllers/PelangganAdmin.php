@@ -2,19 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ModelPelanggan;
+use App\Models\User;
 
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class PelangganAdmin extends Controller
 {
     public function index()
     {
-        $pelanggan = ModelPelanggan::all();
+        $pelanggan = User::all();
         return view('pelanggan', [
+            'active' =>  'pelanggan',
             'pelanggan' => $pelanggan]);
     }
 
@@ -22,7 +24,7 @@ class PelangganAdmin extends Controller
     {
         try {
 
-            DB::table('pelanggans')->where('id',$id)->delete();
+            DB::table('users')->where('id',$id)->delete();
             return redirect('/pelanggan')->with('sukses',' Data berhasil dihapus');
     
         }
@@ -34,7 +36,9 @@ class PelangganAdmin extends Controller
     
     public function viewAdd()
     {
-        return view('addPelanggan');
+        return view('addPelanggan',[
+            'active' =>  'pelanggan',
+        ]);
     }
 
     public function add(Request $request)
@@ -42,17 +46,16 @@ class PelangganAdmin extends Controller
         try{
 
             $this->validate($request, [
+                'name'   => 'required',
                 'email'   => 'required',
                 'password'   => 'required',
-                'nama_pelanggan'   => 'required',
-                'alamat'   => 'required',
             ]);
     
-            ModelPelanggan::create([
+            User::create([
+                'name' => $request->name,
                 'email' => $request->email,
-                'password' => $request->password,
-                'nama_pelanggan' => $request->nama_pelanggan,
-                'alamat' => $request->alamat,
+                'password' => Hash::make($request->password),
+
             ]);
      
             return redirect('/pelanggan ')->with('sukses','Data berhasil ditambahkan');
@@ -65,38 +68,6 @@ class PelangganAdmin extends Controller
         }
 
 
-        public function viewedit($id){
-            $pelanggan = DB::table('pelanggans')->where('id',$id)->get();
-            return view('updatePelanggan', [
-                'pelanggan' => $pelanggan]);
-        }
-    
-        public function update(Request $request){
-    
-            try{
-                $this->validate($request, [
-                    'id'   => 'required',
-                    'email'   => 'required',
-                    'password'   => 'required',
-                    'nama_pelanggan'   => 'required',
-                    'alamat'   => 'required',
-               
-                ]);
-        
-                DB::table('pelanggans')->where('id',$request->id)->update([
-                    'email'             => $request->email,
-                    'password'            => $request->password,
-                    'nama_pelanggan'      => $request->nama_pelanggan,
-                    'alamat'      => $request->alamat,
-                    ]);
-                    return redirect('/pelanggan')->with('sukses',' Data berhasil di update');
-    
-            }
-            catch(Exception $f){
-                return redirect('/pelanggan')->with('gagal',' Data tidak dapat diupdate');
-    
-            }
-          
-        }
+
 
 }

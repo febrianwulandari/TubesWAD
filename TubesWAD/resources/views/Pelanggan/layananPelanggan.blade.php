@@ -1,4 +1,4 @@
-@extends('Pelanggan.IndexPelanggan') 
+@extends('Pelanggan.Index') 
 @section('title','Wools Laundry || Layanan Pelanggan') 
 @section('konten')
 @if (!$layanan->isEmpty())
@@ -30,7 +30,7 @@
              {{$layan->desc}}
              </p>
               <br>
-              <a href="" class="btn btn-primary">Pilih Layanan</a>
+              <a href="/pelanggan/add/{{$layan->id}}" class="btn btn-primary">Pilih Layanan</a>
             </div>
           </div>
         </div>

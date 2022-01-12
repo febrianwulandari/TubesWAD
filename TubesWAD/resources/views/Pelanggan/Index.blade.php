@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,18 +14,20 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-#E7FBFF;" style="background-color: #E7FBFF;">
   <div class="container-fluid">
-  <a class="navbar-brand" href="/homeLogin">
+  <a class="navbar-brand" href="/home">
       <img src=" {{asset('asset/wools2.png')}}" alt="" width="40" height="45" class="d-inline-block align-text-top" style=" margin-left : 100px">
       <img src=" {{asset('asset/wools.png')}}" alt="" width="150" height="19" class="d-inline-block align-text-top" style="margin-top: 15px;">
     </a>
   
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style=" margin-right : 100px">
-      <li><a href="/homePelanggan" class="nav-link px-2 link-secondary" >Home</a></li>
-      <li><a href="/login" class="nav-link px-2 link-dark">Layanan</a></li>
-      <li><a href="/login" class="nav-link px-2 link-dark">Riwayat</a></li>
-      <li><a href="/login" class="nav-link px-2 link-dark">Profile</a></li>
-      <li><a href="/register" type="button" class="btn btn-primary" style="background-color: #01AFD0; margin-left: 20px; width: 150px">Register</a></li>
-      <li><a href="/login" type="button" class="btn btn-primary" style="background-color: #01AFD0; margin-left: 20px; width: 150px">Login</a></li>
+      <li><a href="/home" class="nav-link px-2 link-secondary {{( $active === "home" ) ? ' active fw-bold ' : '' }}" >HOME</a></li>
+      <li><a href="/layananPelanggan" class="nav-link px-2 link-secondary {{( $active === "layanan" ) ? ' active fw-bold ' : '' }}">LAYANAN</a></li>
+      <li><a href="/pelanggan/booking" class="nav-link px-2 link-secondary {{( $active === "orders" ) ? ' active fw-bold ' : '' }}"  >ORDERS</a></li>
+      <li><a href="" class="nav-link px-2 link-secondary {{( $active === "riwayat" ) ? ' active fw-bold ' : '' }}" style="margin-right: 30px;" >RIWAYAT</a></li>
+      <img src=" {{asset('asset/1.png')}}" alt="" width="40" height="40" class="d-inline-block align-text-top">
+      <li><a href="" class="nav-link px-2 link-dark" style="font-weight: bold;color: #51758E">{{Auth::user()->name}}</a></li>
+
+      <li><a href="/logout" type="button" class="btn btn-primary" style="background-color: #01AFD0; margin-left: 20px; width: 150px">Logout</a></li>
     </ul>
     </div>
 </nav>

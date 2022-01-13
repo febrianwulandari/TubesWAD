@@ -28,8 +28,6 @@ Route::get('/riwayat', function () {return view('riwayat');});
 Route::get('/profile', function () {return view('profile');});
 
 
-
-
 // Admin
 Route::get('/loginAdmin',function () {return view('LoginAdmin');});
 Route::get('/layanan',[layanan::class, 'index']);
@@ -42,8 +40,8 @@ Route::get('/pelanggan',[PelangganAdmin::class, 'index']);
 Route::get('/pelanggan/delete/{id}', [PelangganAdmin::class, 'hapus']);
 Route::post('/pelanggan/update',[PelangganAdmin::class, 'update']);
 Route::get('/pelanggan/viewedit/{id}',[PelangganAdmin::class, 'viewedit']);
-Route::post('/pelanggan/add',[PelangganAdmin::class, 'add']);
-Route::get('/pelanggan/viewadd',[PelangganAdmin::class, 'viewAdd']);
+Route::post('/pelanggan/add/admin',[PelangganAdmin::class, 'add']);
+Route::get('/pelanggan/viewad',[PelangganAdmin::class, 'viewAdd']);
 Route::get('/homeAdmin',[bookingAdminController::class, 'index']);
 
 // User

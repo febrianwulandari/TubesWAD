@@ -3,7 +3,7 @@
 @section('konten')
 
 <section>
-<div class="col-md-12"  style="background-color: #E7FBFF;">
+<div class="col-md-12"  style="background-color: #E7FBFF; margin-top:70px">
 <div class="row">
   <div class="col-md-6">
     <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:bolder; margin-top:70px">Indonesia 
@@ -21,6 +21,9 @@
 </div>
 </div>
 </section>
+
+
+
 <section id="fitur">
   <div class="col-md-10" style="background-color:FAFAFA; margin-left:100px">
     <div class="row">
@@ -45,6 +48,15 @@
   </div>
   <br>
   <br>
+</section>
+
+<section id="OurWork">
+<div class="col-md-12">
+<div class="row">
+  <p style="color: #164D74;font-size:40px; font-weight:bolder; text-align:center;margin-top:20px">How washted works🔥</p>
+  <p style="color: #164D74; font-size:18px; margin-bottom:80px;  text-align:center; font-weight:lighter;">The following is a laundry workflow</p>
+</div>
+</div>
 </section>
 
 <section id="howorder">

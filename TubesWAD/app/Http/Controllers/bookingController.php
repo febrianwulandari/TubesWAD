@@ -24,12 +24,13 @@ class bookingController extends Controller
     public function addBooking()
     {
         return view('Pelanggan.addBooking',[
-            'active' =>  'orders'
+            'active' =>  'orders',
         ]);
     }
     public function getID($id){
         $layans = DB::table('layanans')->where('id',$id)->get();
         return view('Pelanggan.addBooking', [
+            'active' =>  'orders',
             'layans' => $layans 
         ]);
     }

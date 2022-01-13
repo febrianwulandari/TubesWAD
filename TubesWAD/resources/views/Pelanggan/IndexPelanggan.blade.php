@@ -13,18 +13,14 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-#E7FBFF;" style="background-color: #E7FBFF;">
+<nav class="navbar navbar-expand-lg navbar-light bg-#E7FBFF; fixed-top" style="background-color: #E7FBFF;">
   <div class="container-fluid">
-  <a class="navbar-brand" href="/homeLogin">
+  <a class="navbar-brand" href="/homePelanggan">
       <img src=" {{asset('asset/wools2.png')}}" alt="" width="40" height="45" class="d-inline-block align-text-top" style=" margin-left : 100px">
       <img src=" {{asset('asset/wools.png')}}" alt="" width="150" height="19" class="d-inline-block align-text-top" style="margin-top: 15px;">
     </a>
   
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style=" margin-right : 100px">
-      <li><a href="/homePelanggan" class="nav-link px-2 link-secondary" >Home</a></li>
-      <li><a href="/login" class="nav-link px-2 link-dark">Layanan</a></li>
-      <li><a href="/login" class="nav-link px-2 link-dark">Riwayat</a></li>
-      <li><a href="/login" class="nav-link px-2 link-dark">Profile</a></li>
       <li><a href="/register" type="button" class="btn btn-primary" style="background-color: #01AFD0; margin-left: 20px; width: 150px">Register</a></li>
       <li><a href="/login" type="button" class="btn btn-primary" style="background-color: #01AFD0; margin-left: 20px; width: 150px">Login</a></li>
     </ul>

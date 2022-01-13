@@ -36,7 +36,8 @@ class PelangganAdmin extends Controller
     
     public function viewAdd()
     {
-        return view('addPelanggan',[
+        return view('addPelanggan',
+        [
             'active' =>  'pelanggan',
         ]);
     }

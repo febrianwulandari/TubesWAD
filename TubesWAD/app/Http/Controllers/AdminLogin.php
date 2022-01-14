@@ -48,13 +48,19 @@ class AdminLogin extends Controller
             'password' => 'required'
         ]);
 
-        $admins = Admin::where('email', $request->email)->get(['password']);
+        $admins = Admin::where('email', $request->email)->first();
 
-        if ($admins[0]->password == $request->password){
-            $request->session()->put('email', $request->email);
-            $request->session()->regenerate();
+        // if ($admins[0]->password == $request->password){
+        if ($admins->password == $request->password){
+            
+            $data = $request->session()->all();
+            $request->session()->put('nama', $data['name']);
+            // return $admins;
+            // exit();
+            // $request->session()->put('name', $admins->nama_admin);
+            // $request->session()->regenerate();
 
-            return redirect()->intended('/homeAdmin');
+            return redirect('/homeAdmin');
         }
 
         return back()->withErrors([

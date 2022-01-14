@@ -14,6 +14,10 @@
   </div>
   @endif
 
+  @if(session('nama'))
+  <h2>Hello, {{ session('nama') }}</h2>
+  @endif
+
 @if (!$layanan->isEmpty())
 <div class="col-md-10" style="margin-left: 20px;">
     <p style="color: #164D74;margin-top:20px; margin-left:90px; font-size:30px;font-weight:bold;">Data Order</p>

@@ -12,7 +12,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-#E7FBFF;" style="background-color: #E7FBFF;">
+<nav class="navbar navbar-expand-lg navbar-light bg-#E7FBFF; fixed-top" style="background-color: #E7FBFF;">
   <div class="container-fluid">
   <a class="navbar-brand" href="/home">
       <img src=" {{asset('asset/wools2.png')}}" alt="" width="40" height="45" class="d-inline-block align-text-top" style=" margin-left : 100px">
@@ -23,7 +23,7 @@
       <li><a href="/home" class="nav-link px-2 link-secondary {{( $active === "home" ) ? ' active fw-bold ' : '' }}" >HOME</a></li>
       <li><a href="/layananPelanggan" class="nav-link px-2 link-secondary {{( $active === "layanan" ) ? ' active fw-bold ' : '' }}">LAYANAN</a></li>
       <li><a href="/pelanggan/booking" class="nav-link px-2 link-secondary {{( $active === "orders" ) ? ' active fw-bold ' : '' }}"  >ORDERS</a></li>
-      <li><a href="" class="nav-link px-2 link-secondary {{( $active === "riwayat" ) ? ' active fw-bold ' : '' }}" style="margin-right: 30px;" >RIWAYAT</a></li>
+      <li><a href="" class="nav-link px-2 link-secondary {{( $active === "riwayat" ) ? ' active fw-bold ' : '' }}" style="margin-right: 40px;" >RIWAYAT</a></li>
       <img src=" {{asset('asset/1.png')}}" alt="" width="40" height="40" class="d-inline-block align-text-top">
       <li><a href="" class="nav-link px-2 link-dark" style="font-weight: bold;color: #51758E">{{Auth::user()->name}}</a></li>
 

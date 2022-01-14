@@ -8,6 +8,7 @@ use App\Http\Controllers\register;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\WebPelanggan;
 use App\Http\Controllers\pelanggan;
+use App\Http\Controllers\AdminLogin;
 use App\Http\Controllers\PelangganAdmin;
 use Illuminate\Support\Facades\Route;
 
@@ -28,10 +29,9 @@ Route::get('/riwayat', function () {return view('riwayat');});
 Route::get('/profile', function () {return view('profile');});
 
 
-
-
 // Admin
-Route::get('/loginAdmin',function () {return view('LoginAdmin');});
+Route::get('/loginAdmin',[AdminLogin::class, 'index']);
+Route::post('/loginAdmin',[AdminLogin::class, 'authenticate']);
 Route::get('/layanan',[layanan::class, 'index']);
 Route::post('/layanan/add',[layanan::class, 'add']);
 Route::get('/layanan/viewadd',[layanan::class, 'viewAdd']);
@@ -42,8 +42,8 @@ Route::get('/pelanggan',[PelangganAdmin::class, 'index']);
 Route::get('/pelanggan/delete/{id}', [PelangganAdmin::class, 'hapus']);
 Route::post('/pelanggan/update',[PelangganAdmin::class, 'update']);
 Route::get('/pelanggan/viewedit/{id}',[PelangganAdmin::class, 'viewedit']);
-Route::post('/pelanggan/add',[PelangganAdmin::class, 'add']);
-Route::get('/pelanggan/viewadd',[PelangganAdmin::class, 'viewAdd']);
+Route::post('/pelanggan/add/admin',[PelangganAdmin::class, 'add']);
+Route::get('/pelanggan/viewad',[PelangganAdmin::class, 'viewAdd']);
 Route::get('/homeAdmin',[bookingAdminController::class, 'index']);
 
 // User
@@ -57,6 +57,10 @@ Route::get('/pelanggan/booking',[bookingController::class, 'index']);
 Route::get('/pelanggan/booking/add',[bookingController::class, 'addBooking']);
 Route::get('/pelanggan/add/{id}',[bookingController::class,'getID']);
 Route::post('/pelanggan/booking/create',[bookingController::class,'addData']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -43,8 +43,8 @@
       </div>
       <div class="row" style="margin-top:50px">
       @foreach($layanan as $layan)
-        <div class="col-md-3" style="margin-left:100px; margin-bottom:65px;">
-          <div class="card" style="background-color:#E7FBFF;">
+        <div class="col-md-3" style="margin-left:100px; margin-bottom:65px; background-color:#E7FBFF;">
+          <div class="card">
             <img src="/asset/{{$layan->image}}" width="100%" height="220px" class="card-img-top">
             <div class="card-body">
                 <table>

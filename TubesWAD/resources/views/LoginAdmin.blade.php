@@ -64,7 +64,7 @@
     </div>
     @endif
     </center>
-    <form action="/login" method="post">
+    <form action="/loginAdmin" method="post">
         @csrf
   <div class="mb-3" style="text-align: left;">
     <label for="exampleInputEmail1" class="form-label">Email</label>

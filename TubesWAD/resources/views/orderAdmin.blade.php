@@ -1,5 +1,5 @@
 @extends('index') 
-@section('title','Wools Laundry || Data Booking Admin') 
+@section('title','Wools Laundry || Data Order Admin') 
 @section('konten')
 @if (session('sukses'))
 <br>
@@ -15,7 +15,7 @@
   @endif
 
 @if (!$bookings->isEmpty())
-<div class="col-md-10" style="margin-left: 20px;">
+<div class="col-md-10" style="margin-left: 20px; margin-top:80px">
     <p style="color: #164D74;margin-top:20px; margin-left:90px; font-size:30px;font-weight:bold;">Data Booking</p>
     <table>
         <tr>
@@ -26,6 +26,7 @@
             </td>
         </tr>
     </table>
+
     <table class="table table-striped" style="background-color:#164D74;margin-left: 90px;margin-bottom:100px">
         <thead>
             <tr>
@@ -64,5 +65,5 @@
 <center><a href="/layananPelanggan"><button type="submit" class="btn btn-success">Tambah Booking +</button></a></center>
 </div>
 @endif
-
 @endsection
+

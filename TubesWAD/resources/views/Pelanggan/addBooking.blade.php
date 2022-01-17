@@ -10,7 +10,7 @@
 <form action="/pelanggan/booking/create" method="POST">
 @csrf
 @foreach($layans as $lay)
-  <label for="exampleFormControlInput1" class="form-label">ID Layanan</label>
+  <label for="exampleFormControlInput1" class="form-label">Layanan</label>
   <input type="text" name="id_layanan" value="{{$lay->id}}" class="form-control" id="id_layanan" readonly>
   @endforeach
 
@@ -25,8 +25,12 @@
 </div>
 
 <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Status</label>
-  <input type="text" name="status" value="Waiting" class="form-control" id="status" required readonly>
+  <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
+  <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+</div>
+
+<div class="mb-3">
+  <input type="hidden" name="status" value="Waiting" class="form-control" id="status" required readonly>
 </div>
 @foreach($layans as $lay)
 <div class="mb-3">
@@ -34,7 +38,7 @@
 </div>
 @endforeach
 <div class="mb-3">
-  <input type="hidden" name="nama_pelanggan" class="form-control" value="{{Auth::user()->name}}" id="nama_pelanggan" required>
+  <input type="hidden" name="id_user" class="form-control" value="{{Auth::user()->id}}" id="id_user" required>
 </div>
 <div class="mb-3">
 <button type="submit" class="btn btn-primary"> Order Laundry </button>

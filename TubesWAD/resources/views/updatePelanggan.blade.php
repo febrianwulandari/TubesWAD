@@ -4,10 +4,9 @@
 
 <h2 style="text-align: center; margin-top: 30px; color: rgb(8, 109, 109);">Update Data Layanan</h2>
 <center><div class="col-md-10" style="text-align: left;">
-@foreach($pelanggan as $pel)
+
 <form action="/pelanggan/update" method="POST" enctype="multipart/form-data">
 {{ csrf_field() }}
-
 <div class="form-group">
 <input type="hidden" name="id" value="{{ $pel->id }}"> <br/>
 </div>

@@ -23,7 +23,7 @@
       <li><a href="/home" class="nav-link px-2 link-secondary {{( $active === "home" ) ? ' active fw-bold ' : '' }}" >HOME</a></li>
       <li><a href="/layananPelanggan" class="nav-link px-2 link-secondary {{( $active === "layanan" ) ? ' active fw-bold ' : '' }}">LAYANAN</a></li>
       <li><a href="/pelanggan/booking" class="nav-link px-2 link-secondary {{( $active === "orders" ) ? ' active fw-bold ' : '' }}"  >ORDERS</a></li>
-      <li><a href="" class="nav-link px-2 link-secondary {{( $active === "riwayat" ) ? ' active fw-bold ' : '' }}" style="margin-right: 40px;" >RIWAYAT</a></li>
+      <li><a href="/pelanggan/riwayat" class="nav-link px-2 link-secondary {{( $active === "riwayat" ) ? ' active fw-bold ' : '' }}" style="margin-right: 40px;" >RIWAYAT</a></li>
       <img src=" {{asset('asset/1.png')}}" alt="" width="40" height="40" class="d-inline-block align-text-top">
       <li><a href="" class="nav-link px-2 link-dark" style="font-weight: bold;color: #51758E">{{Auth::user()->name}}</a></li>
 

@@ -4,10 +4,10 @@
 @if (!$layanan->isEmpty())
 
 <section>
-<div class="col-md-12"  style="background-color: #E7FBFF;">
+<div class="col-md-12"  style="background-color: #E7FBFF;  margin-top:70px">
 <div class="row">
   <div class="col-md-6">
-    <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:bolder; margin-top:70px">Best Service
+    <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:bolder;  margin-top:70px">Best Service
       <br>
      at Wools Laundry
 </p>
@@ -29,7 +29,7 @@
 <br>Just For You 🔥</p>
 </div>
   <div class="col-md-4">
-  <p style="color: #164D74;font-size:18px; margin-left:100px; font-weight:lighter; margin-top:130px">the following are the best services
+  <p style="color: #164D74;font-size:18px; margin-left:100px; font-weight:lighter; margin-top:110px">the following are the best services
   <br> that we provide as a solution to your daily needs
 </div>
 </div>
@@ -41,10 +41,10 @@
   <section id="Layanan">
     <div class="container">
       </div>
-      <div class="row" style="margin-top:50px">
+      <div class="row" style="margin-top:100px">
       @foreach($layanan as $layan)
-        <div class="col-md-3" style="margin-left:100px; margin-bottom:65px; background-color:#E7FBFF;">
-          <div class="card">
+        <div class="col-md-3" style="margin-left:100px; margin-bottom:65px;">
+          <div class="card" style=" background-color:#E7FBFF;">
             <img src="/asset/{{$layan->image}}" width="100%" height="220px" class="card-img-top">
             <div class="card-body">
                 <table>

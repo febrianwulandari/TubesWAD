@@ -55,55 +55,15 @@
 </div>
   <div class="col-md-6">
  
-  <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:bolder; margin-top:30px">Order Flow ?
+  <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:bolder; margin-top:30px">About Wools Laundry 
 </p>
 <p style="color: #164D74;margin-left:100px;font-weight:lighter;">Here are the steps to order Wools Laundry services :</p>
-<table>
-  <tr>
-    <td>
-    <img src=" {{asset('asset/Vector.png')}}" alt="" width="25" class="d-inline-block align-text-top" style=" margin-left : 100px; ">
-    </td>
-    <td>
-    <p style="margin-top: 10px; color: #164D74; margin-left:20px">Enter your laundry data and select a service</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-    <img src=" {{asset('asset/2.png')}}" alt="" width="25" class="d-inline-block align-text-top" style=" margin-left : 100px; ">
-    </td>
-    <td>
-    <p style="margin-top: 10px; color: #164D74;margin-left:20px">Wait until the laundry is finished processing</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-    <img src=" {{asset('asset/3.png')}}" alt="" width="25" class="d-inline-block align-text-top" style=" margin-left : 100px; ">
-    </td>
-    <td>
-    <p style="margin-top: 10px; color: #164D74; margin-left:20px">make a laundry payment</p>
-    </td>
-  </tr>
-  <tr>
-    <td>
-    <img src=" {{asset('asset/4.png')}}" alt="" width="25" class="d-inline-block align-text-top" style=" margin-left : 100px; ">
-    </td>
-    <td>
-    <p style="margin-top: 10px;color: #164D74; margin-left:20px">laundry is complete and ready to be delivered</p>
-    </td>
-  </tr>
-</table>
 <br>
 <a href="/layananPelanggan"  type="button" class="btn btn-primary" style="background-color:#72A4A5; margin-left: 100px; color:#ffff; width: 160px">Make an Order</a>
 </div>
 </div>
 </div>
 </section>
-
-
-
-
-
-
 <section id="OurWork">
 <div class="col-md-12">
 <div class="row">

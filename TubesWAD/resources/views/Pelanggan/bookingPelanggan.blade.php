@@ -3,13 +3,13 @@
 @section('konten')
 @if (session('sukses'))
 <br>
-  <div class="alert-success"  style=" width: 85%; height: 50px; margin-left: 100px;">
+  <div class="alert-success"  style=" width: 85%; height: 50px;margin-top:90px; margin-left: 100px;">
     <p>{{ session('sukses') }}</p>
 </div>
   @endif
 
   @if (session('gagal'))
-  <div class="alert-danger"  style=" width: 75%; height: 50px; margin-left: 200px;">
+  <div class="alert-danger"  style=" width: 75%; height: 50px;margin-top:90px;  margin-left: 200px;">
     <p>{{ session('gagal') }}</p>
   </div>
   @endif
@@ -47,7 +47,7 @@
                 <td class="table-light table-striped">{{$book->berat_laundry}}</td>
                 <td class="table-light  table-striped">{{$book->status}}</td>
                 <td class="table-light  table-striped" style="text-align:center ; color: #ffff">
-                <a href="" type="button" class="btn btn-info">Detail Pesanan</a>
+                <a href="/pelanggan/booking/detail/{{$book->id}}" type="button" class="btn btn-info" style="color: #ffff">Detail Pesanan</a>
                 </td>
             </tr>
             @endforeach
@@ -56,7 +56,7 @@
 </div>
 
 @else()
-<div class="col-md-12" style="margin-bottom: 100px;">
+<div class="col-md-12" style="margin-bottom: 100px; margin-top:90px" >
     <h6 style="text-align: center; margin-top: 30px; color: rgb(8, 109, 109);">There is no data ....</h6>
 <center><a href="/layananPelanggan"><button type="submit" class="btn btn-success">Tambah Booking +</button></a></center>
 </div>

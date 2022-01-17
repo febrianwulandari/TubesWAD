@@ -6,10 +6,9 @@ use App\Http\Controllers\layanan;
 use App\Http\Controllers\layananPelanggan;
 use App\Http\Controllers\register;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\WebPelanggan;
-use App\Http\Controllers\pelanggan;
 use App\Http\Controllers\AdminLogin;
 use App\Http\Controllers\PelangganAdmin;
+use App\Http\Controllers\RiwayatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,6 +44,7 @@ Route::get('/pelanggan/viewedit/{id}',[PelangganAdmin::class, 'viewedit']);
 Route::post('/pelanggan/add/admin',[PelangganAdmin::class, 'add']);
 Route::get('/pelanggan/viewad',[PelangganAdmin::class, 'viewAdd']);
 Route::get('/homeAdmin',[bookingAdminController::class, 'index']);
+Route::get('/orders',[bookingAdminController::class, 'orders']);
 
 // User
 Route::get('/register',[register::class, 'index']);
@@ -57,10 +57,10 @@ Route::get('/pelanggan/booking',[bookingController::class, 'index']);
 Route::get('/pelanggan/booking/add',[bookingController::class, 'addBooking']);
 Route::get('/pelanggan/add/{id}',[bookingController::class,'getID']);
 Route::post('/pelanggan/booking/create',[bookingController::class,'addData']);
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/pelanggan/booking/detail/{id}',[bookingController::class,'getDetailBooking']);
+Route::get('/pelanggan/booking/pembayaran/{id}',[bookingController::class,'addPembayaran']);
+Route::post('/pelanggan/booking/updatepembayaran',[bookingController::class,'updateDataPembayaran']);
+Route::get('/pelanggan/riwayat',[RiwayatController::class,'index']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

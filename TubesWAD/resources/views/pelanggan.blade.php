@@ -38,7 +38,6 @@
                 <td class="table-light table-striped">{{ $pel->email}}</td>
                 <td class="table-light  table-striped">
                     <center>
-                    <a href="/pelanggan/viewedit/{{$pel->id}}" type="button" class="btn btn-warning">Update</a>
                     <a href="/pelanggan/delete/{{$pel->id}}" type="button" class="btn btn-danger">Delete</a>
                     </center>
                 </td>
@@ -47,7 +46,6 @@
             @endforeach
     </table>
 </div>
-
 @else()
 <div class="col-md-12" style="margin-bottom: 100px;">
     <h6 style="text-align: center; margin-top: 30px; color: rgb(8, 109, 109);">There is no data ....</h6>

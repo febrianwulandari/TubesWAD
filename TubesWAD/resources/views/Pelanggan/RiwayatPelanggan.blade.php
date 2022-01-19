@@ -17,7 +17,7 @@
                 <table>
                     <tr>
                         <td>
-                        <a class="btn btn-warning" href="" role="button" style="margin-left: 50rem; width:200px; height:45px" >Cetak Nota</a>
+                        <a class="btn btn-warning" href="/riwayat/print/{{$bo->id}}" role="button" style="margin-left: 50rem; width:200px; height:45px" >Cetak Nota</a>
                         </td>
                     </tr>
                 </table>

@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\bookings;
-
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 use Exception;
-use PDF;
 use Illuminate\Support\Facades\Auth;
 class RiwayatController extends Controller
 {
@@ -24,4 +23,15 @@ class RiwayatController extends Controller
             'active' =>  'riwayat',
             'booking' => $booking]);
     }
+
+    public function generatePDF($id)
+    {           
+        $data = bookings::where('id',$id)->get();
+        $pdf = PDF::loadView('Pelanggan.Nota',[
+          'data' => $data,
+        ]);
+        return $pdf->download('NotaPembayaran.pdf');
+    }
+
+
 }

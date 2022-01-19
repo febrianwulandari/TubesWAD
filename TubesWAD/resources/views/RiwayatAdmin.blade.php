@@ -17,6 +17,9 @@
 @if (!$booking->isEmpty())
 <div class="col-md-10" style="margin-left: 20px; margin-top:80px">
     <p style="color: #164D74;margin-top:20px; margin-left:90px; font-size:30px;font-weight:bold;">Data Riwayat</p>
+    <a href="/riwayat/print" style="color: #164D74;margin-top:20px; margin-left:90px; font-size:30px;font-weight:bold;"><button type="submit" class="btn btn-success">Download Riwayat</button></a>
+   <br>
+   <br>
     <table class="table table-striped" style="background-color:#164D74;margin-left: 90px;margin-bottom:100px">
         <thead>
             <tr>

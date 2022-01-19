@@ -45,6 +45,7 @@ class HomeController extends Controller
         ]);
 
         Auth::user()->password = Hash::make($request->password_baru);
+        Auth::user()->email =$request->email;
         Auth::user()->save();
         return redirect('/home')->with('sukses', 'Berhasil Memperbarui Password');
     }

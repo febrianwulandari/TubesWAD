@@ -49,6 +49,7 @@ Route::get('/orders',[bookingAdminController::class, 'orders']);
 Route::get('/orders/hapus/{id}',[bookingAdminController::class, 'hapus']);
 Route::put('/orders/update',[bookingAdminController::class, 'updateDataStatus']);
 Route::get('/riwayat',[RiwayatAdminController::class,'index']);
+Route::get('/riwayat/print',[RiwayatAdminController::class,'generatePDF']);
 Route::put('/updateAkun',[HomeController::class,'updateAkun']);
 Route::get('/logout/admin', [AdminLogin::class, 'logout']);
 Route::put('/updateAkun/admin',[bookingAdminController::class,'updateAkun']);
@@ -62,5 +63,8 @@ Route::get('/pelanggan/booking/detail/{id}',[bookingController::class,'getDetail
 Route::get('/pelanggan/booking/pembayaran/{id}',[bookingController::class,'addPembayaran']);
 Route::post('/pelanggan/booking/updatepembayaran',[bookingController::class,'updateDataPembayaran']);
 Route::get('/pelanggan/riwayat',[RiwayatController::class,'index']);
+Route::get('/riwayat/print/{id}',[RiwayatController::class,'generatePDF']);
+
+
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

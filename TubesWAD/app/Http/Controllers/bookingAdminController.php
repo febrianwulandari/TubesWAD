@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Exception;
 use Illuminate\Support\Facades\Hash;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\bookings;
@@ -123,8 +124,9 @@ class bookingAdminController extends Controller
         ]);
 
         Auth::guard('admin')->user()->password = Hash::make($request->password_baru);
+        Auth::guard('admin')->user()->email =$request->email;
         Auth::guard('admin')->user()->save();
-        return redirect('/homeAdmin')->with('sukses', 'Berhasil Memperbarui Password');
+        return redirect('/home')->with('sukses', 'Berhasil Memperbarui Password');
     }
 
     

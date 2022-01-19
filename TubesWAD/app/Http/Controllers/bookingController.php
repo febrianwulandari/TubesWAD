@@ -117,9 +117,3 @@ class bookingController extends Controller
         }
           
     }
-
-
-        // public function print(){
-        //     $pdf = PDF::loadview('Pelanggan.detailBooking')->setPaper('A4','potrait');
-        //     return $pdf->stream();
-        // }}

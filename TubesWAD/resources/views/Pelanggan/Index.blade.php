@@ -114,7 +114,7 @@
             <p>{{ session('gagal') }}</p>
           </div>
           @endif
-      <form action="/updateAkun/admin" method="POST">
+      <form action="/updateAkun" method="POST">
       <div class="modal-body">
           @csrf
           @METHOD('PUT')

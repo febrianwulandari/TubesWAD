@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Validator;
 
 class PelangganAdmin extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+    
     public function index()
     {
         $pelanggan = User::all();

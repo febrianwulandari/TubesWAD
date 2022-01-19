@@ -10,11 +10,10 @@ use Illuminate\Support\Facades\DB;
 
 class layanan extends Controller
 {
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    //     $this->ModelLayanan = new ModelsLayanan();
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     public function index()
     {
         $layanan = ModelsLayanan::all();

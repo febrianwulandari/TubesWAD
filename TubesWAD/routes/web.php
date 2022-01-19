@@ -51,6 +51,7 @@ Route::get('/orders/hapus/{id}',[bookingAdminController::class, 'hapus']);
 Route::put('/orders/update',[bookingAdminController::class, 'updateDataStatus']);
 Route::get('/riwayat',[RiwayatAdminController::class,'index']);
 Route::put('/updateAkun',[HomeController::class,'updateAkun']);
+Route::get('/logout/admin', [AdminLogin::class, 'logout']);
 
 // User
 Route::get('/register',[register::class, 'index']);

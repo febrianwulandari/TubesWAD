@@ -11,6 +11,10 @@ use App\Models\layanan;
 class bookingAdminController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     public function index()
     {
         $bookings = bookings::all();
@@ -104,6 +108,8 @@ class bookingAdminController extends Controller
         }
        
     }
+
+    
 
 
 }

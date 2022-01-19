@@ -27,6 +27,7 @@
       <li><a href="/pelanggan" class="nav-link px-2 link-secondary {{( $active === "pelanggan" ) ? ' active fw-bold ' : '' }}"  >PELANGGAN</a></li>
       <li><a href="/riwayat" class="nav-link px-2 link-secondary {{( $active === "riwayat" ) ? ' active fw-bold ' : '' }}">RIWAYAT</a></li>
       <li><a href="" class="nav-link px-2 link-secondary {{( $active === "profile" ) ? ' active fw-bold ' : '' }}" style="margin-right: 40px;"  >PROFILE</a></li>
+      <li><a href="/logout/admin" type="button" class="btn btn-primary" style="background-color: #01AFD0; margin-left: 20px; width: 150px">Logout</a></li>
       <!-- <li><a href="/logout" type="button" class="btn btn-primary" style="background-color: #01AFD0; margin-left: 20px; width: 150px">Logout</a></li> -->
     </ul>
     </div>

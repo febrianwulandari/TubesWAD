@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class RiwayatAdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
+    
     public function index()
       
     {

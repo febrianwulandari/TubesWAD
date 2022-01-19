@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Exception;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\bookings;
@@ -107,6 +108,23 @@ class bookingAdminController extends Controller
             return redirect('/orders')->with('gagal',' Data tidak dapat dihapus, karena masih digunakan !');
         }
        
+    }
+
+    
+    public function updateAkun(Request $request)
+    {
+        if (!Hash::check($request->password_lama, Auth::guard('admin')->user()->password)) {
+            return back()->with('gagal', 'Password not match');
+        }
+
+        $request->validate([
+            'password_lama' => 'min:5|max:255',
+            'password_baru' => 'min:5|max:255',
+        ]);
+
+        Auth::guard('admin')->user()->password = Hash::make($request->password_baru);
+        Auth::guard('admin')->user()->save();
+        return redirect('/homeAdmin')->with('sukses', 'Berhasil Memperbarui Password');
     }
 
     

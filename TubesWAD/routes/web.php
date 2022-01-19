@@ -23,16 +23,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {return view('login');});
 Route::get('/homePelanggan', function () {return view('Pelanggan/HomeTidakLogin');});
-Route::get('/riwayat', function () {return view('riwayat');});
-Route::get('/profile', function () {return view('profile');});
-
-
-// Admin
+Route::get('/', function () {return view('login');})->middleware('user_not_login');
 Route::get('/loginAdmin',[AdminLogin::class, 'index']);
 Route::post('/loginAdmin',[AdminLogin::class, 'authenticate']);
+Route::get('/register',[register::class, 'index'])->middleware('user_not_login');
+Route::post('/register/add',[register::class, 'store']);
+Route::get('/login',[LoginController::class, 'index'])->middleware('user_not_login');
+Route::post('/login',[LoginController::class, 'authenticate']);
+
 Route::get('/layanan',[layanan::class, 'index']);
 Route::post('/layanan/add',[layanan::class, 'add']);
 Route::get('/layanan/viewadd',[layanan::class, 'viewAdd']);
@@ -52,12 +51,7 @@ Route::put('/orders/update',[bookingAdminController::class, 'updateDataStatus'])
 Route::get('/riwayat',[RiwayatAdminController::class,'index']);
 Route::put('/updateAkun',[HomeController::class,'updateAkun']);
 Route::get('/logout/admin', [AdminLogin::class, 'logout']);
-
-// User
-Route::get('/register',[register::class, 'index']);
-Route::post('/register/add',[register::class, 'store']);
-Route::get('/login',[LoginController::class, 'index'])->middleware('guest');
-Route::post('/login',[LoginController::class, 'authenticate']);
+Route::put('/updateAkun/admin',[bookingAdminController::class,'updateAkun']);
 Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/layananPelanggan',[layananPelanggan::class, 'index']);
 Route::get('/pelanggan/booking',[bookingController::class, 'index']);
@@ -69,5 +63,4 @@ Route::get('/pelanggan/booking/pembayaran/{id}',[bookingController::class,'addPe
 Route::post('/pelanggan/booking/updatepembayaran',[bookingController::class,'updateDataPembayaran']);
 Route::get('/pelanggan/riwayat',[RiwayatController::class,'index']);
 Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

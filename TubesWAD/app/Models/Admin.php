@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Admin extends Authenticatable
 {
+    public $timestamps = false;
     use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'admins';
 	protected $fillable = ['id','email','password','nama_admin'];

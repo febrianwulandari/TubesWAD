@@ -101,7 +101,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Detail Profile</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Detail Profile Pelanggan</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       @if (session('sukses'))
@@ -114,7 +114,7 @@
             <p>{{ session('gagal') }}</p>
           </div>
           @endif
-      <form action="/updateAkun" method="POST">
+      <form action="/updateAkun/admin" method="POST">
       <div class="modal-body">
           @csrf
           @METHOD('PUT')

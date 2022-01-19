@@ -17,7 +17,7 @@
 
 @if (!$pelanggan->isEmpty())
 
-<div class="col-md-10" style="margin-left: 20px;">
+<div class="col-md-10" style="margin-left: 20px; margin-top:70px">
     <p style="color: #164D74;margin-top:20px; margin-left:90px; font-size:30px;font-weight:bold;">Data Pelanggan</p>
     <a href="/pelanggan/viewadd"  style="margin-left: 90px; margin-bottom:10px" type="button" class="btn btn-success">+ Tambah Pelanggan</a>
     <table class="table table-striped" style="background-color:#164D74;margin-left: 90px;">
@@ -26,7 +26,6 @@
                 <th scope="col" style="color: #FFFFFF;">No</th>
                 <th scope="col" style="color: #FFFFFF;">Nama Pelanggan</th>
                 <th scope="col" style="color: #FFFFFF;">Email</th>
-                <th scope="col" style="color: #FFFFFF;">Password</th>
                 <th scope="col" style="color: #FFFFFF;  text-align:center">Action</th>
             </tr>
         </thead>
@@ -37,9 +36,9 @@
                 <th class="table-light  table-striped" scope="row">{{$no++}}</th>
                 <td class="table-light  table-striped">{{ $pel->name}}</td>
                 <td class="table-light table-striped">{{ $pel->email}}</td>
-                <td class="table-light  table-striped">{{ $pel->password}}</td>
                 <td class="table-light  table-striped">
                     <center>
+                    <a href="/pelanggan/viewedit/{{$pel->id}}" type="button" class="btn btn-warning">Update</a>
                     <a href="/pelanggan/delete/{{$pel->id}}" type="button" class="btn btn-danger">Delete</a>
                     </center>
                 </td>

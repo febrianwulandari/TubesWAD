@@ -8,6 +8,7 @@ use App\Http\Controllers\register;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminLogin;
 use App\Http\Controllers\PelangganAdmin;
+use App\Http\Controllers\RiwayatAdminController;
 use App\Http\Controllers\RiwayatController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,9 +43,12 @@ Route::get('/pelanggan/delete/{id}', [PelangganAdmin::class, 'hapus']);
 Route::post('/pelanggan/update',[PelangganAdmin::class, 'update']);
 Route::get('/pelanggan/viewedit/{id}',[PelangganAdmin::class, 'viewedit']);
 Route::post('/pelanggan/add/admin',[PelangganAdmin::class, 'add']);
-Route::get('/pelanggan/viewad',[PelangganAdmin::class, 'viewAdd']);
+Route::get('/pelanggan/viewadd',[PelangganAdmin::class, 'viewAdd']);
 Route::get('/homeAdmin',[bookingAdminController::class, 'index']);
 Route::get('/orders',[bookingAdminController::class, 'orders']);
+Route::get('/orders/hapus/{id}',[bookingAdminController::class, 'hapus']);
+Route::put('/orders/update',[bookingAdminController::class, 'updateDataStatus']);
+Route::get('/riwayat',[RiwayatAdminController::class,'index']);
 
 // User
 Route::get('/register',[register::class, 'index']);

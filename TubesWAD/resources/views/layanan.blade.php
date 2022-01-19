@@ -15,7 +15,7 @@
   @endif
 
 @if (!$layanan->isEmpty())
-<div class="col-md-10" style="margin-left: 20px;">
+<div class="col-md-10" style="margin-left: 20px; margin-top:70px">
     <p style="color: #164D74;margin-top:20px; margin-left:90px; font-size:30px;font-weight:bold;">Data Layanan</p>
     <table>
         <tr>

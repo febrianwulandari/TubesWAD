@@ -11,7 +11,8 @@
                 @foreach($booking as $bo)
                 <div class="col-md-10" style=" border: 2px solid grey; border-radius:10px; padding:20px; margin-left:100px; margin-top:10px; margin-bottom:10px">
                 <p  style="font-weight: bold; color: #395569">Nama Pelanggan : {{ auth()->user()->name }}</p>
-                <p  style="font-weight: bold; color: #395569">Tanggal Cucian : {{ $bo->berat_laundry }}</p>
+                <p  style="font-weight: bold; color: #395569">Tanggal Order : {{ $bo->tanggal_booking }}</p>
+                <p  style="font-weight: bold; color: #395569">Tanggal Selesai : {{ $bo->tanggal_pembayaran }}</p>
                 <p  style="font-weight: bold; color: #395569">Jenis Layanan  : {{ $bo->layanans->nama_layanan }}</p>
                 <table>
                     <tr>

@@ -5,7 +5,7 @@
 <h2 style="text-align: center; margin-top: 30px; color: rgb(8, 109, 109);">Input Data Pelanggan</h2>
 
 <center><div class="col-md-10" style="text-align: left;">
-<form action="/pelanggan/add" method="POST" enctype="multipart/form-data">
+<form action="/pelanggan/add/admin" method="POST" enctype="multipart/form-data">
 @csrf
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Nama Pelanggan</label>

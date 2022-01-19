@@ -21,7 +21,7 @@
 </div>
 </div>
 </section>
-<section id="fitur">
+<!-- <section id="fitur">
   <div class="col-md-10" style="background-color:FAFAFA; margin-left:100px">
     <div class="row">
     <div class="col-md-3">
@@ -45,25 +45,68 @@
   </div>
   <br>
   <br>
-</section>
+</section> -->
 
 <section id="aboutme">
-<div class="col-md-12">
+<div class="col-md-12" style="margin-top: 150px; margin-bottom:50px">
 <div class="row">
   <div class="col-md-5">
-  <img src=" {{asset('asset/capture.png')}}" alt=""  class="d-inline-block align-text-top" style=" margin-left : 100px; margin-bottom:100px">
+  <img src=" {{asset('asset/video.png')}}" alt="" width="80%"  class="d-inline-block align-text-top" style=" margin-left : 100px; margin-bottom:100px">
 </div>
   <div class="col-md-6">
  
-  <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:bolder; margin-top:30px">About Wools Laundry 
+  <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:bolder;">Wools Laundry ?
 </p>
-<p style="color: #164D74;margin-left:100px;font-weight:lighter;">Here are the steps to order Wools Laundry services :</p>
+<p style="color: #164D74;margin-left:100px;font-weight:lighter; font-size:18px">Wools Laundry merupakan sebuah perusahaan yang bergerak di bidang penyediaan jasa laundry  untuk masyarakat Indonesia. <br>
 <br>
-<a href="/layananPelanggan"  type="button" class="btn btn-primary" style="background-color:#72A4A5; margin-left: 100px; color:#ffff; width: 160px">Make an Order</a>
+Wools Laundry didirikan pada tahun 2021 oleh sekumpulan mahasiswa Telkom University yang berdomisili di Bandung untuk membantu menyelesaikan berbagai permasalahan yang ada di masyarakat yang membutuhkan jasa laundry.</p>
+<br>
 </div>
 </div>
 </div>
 </section>
+
+
+<section id="visimissi">
+<div class="col-md-12" style="margin-top: 50px; margin-bottom:50px; background-color:#049EBB; height: 380px">
+<div class="row">
+  <div class="col-md-5">
+    <table style="margin-top: 100px;">
+      <tr >
+        <td>
+        <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:normal ; text-align:right; color:#E7FBFF">VISI KAMI</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <p style="color: #164D74;font-size:18px; margin-left:100px; font-weight:lighter;text-align:right; color:#E7FBFF">
+          Menjadi perusahaan terbesar di indonesia yang bergerak dalam bidang penyediaan jasa laundry untuk membantu masyarakat Indonesia menyelesaikan masalah
+          </p>
+        </td>
+      </tr>
+    </table>
+</div>
+  <div class="col-md-5">
+  <table  style="margin-top: 100px;">
+      <tr>
+        <td>
+        <p style="color: #164D74;font-size:40px; margin-left:100px; font-weight:normal; text-align:left; color:#E7FBFF">MISI KAMI</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <p style="color: #164D74;font-size:18px; margin-left:100px; font-weight:lighter;text-align:left; color:#E7FBFF">
+          Mengembangkan bisnis laundry diseluruh indonesia dengan memperhatikan kualitas dan juga layanan terbaik bagi pelanggan
+          </p>
+        </td>
+      </tr>
+    </table>
+</div>
+</div>
+</div>
+</section>
+
+
 <section id="OurWork">
 <div class="col-md-12">
 <div class="row">
@@ -151,11 +194,34 @@
 </section>
 
 <section id="OurServices">
-<div class="col-md-12" style="background-color: #E7FBFF;">
-<div class="row">
-<center>  <p style="color: #164D74;font-size:40px; font-weight:bolder; margin-top:20px">Our Services</p></center>
-<img src=" {{asset('asset/testi2.png')}}" alt=""class="d-inline-block align-text-top" style=" margin-bottom:30px">
+<div class="col-md-12" style="background-color: #E7FBFF; height:550px">
+<br>
+<center>  <p style="color: #164D74;font-size:40px; font-weight:bolder; margin-top:20px;">Testimoni </p></center>
+<br>
+<div class="row" style="margin-left: 140px; margin-bottom:100px"> 
+<div class="card" style="width: 18rem;">
+ <center> <img src="{{asset('asset/userses.png')}}" width="100px" height="100px" alt="..." style="margin-top: 20px;"></center>
+  <div class="card-body">
+    <h5 class="card-title">Benediktus Rafael B</h5>
+    <p class="card-text">Laundry disini sangat terpercaya, harga terjangkau dan ada fitur delivery yang lebih memudahkan kita</p>
+  </div>
+</div>
 
+<div class="card" style="width: 18rem; margin-left: 100px;">
+ <center> <img src="{{asset('asset/female.png')}}" width="100px" height="100px" alt="..." style="margin-top: 20px;"></center>
+  <div class="card-body">
+    <h5 class="card-title">Ardina Aurelia Sandra</h5>
+    <p class="card-text">Sangat terpercaya, wangi parfumnya dan sangat enak dan fitur delivery yang lebih memudahkan kita </p>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem; margin-left: 100px;">
+ <center> <img src="{{asset('asset/male.png')}}" width="100px" height="100px" alt="..." style="margin-top: 20px;"></center>
+  <div class="card-body">
+    <h5 class="card-title">Bagus Dwi P</h5>
+    <p class="card-text">Laundry disini sangat terpercaya, fitur delivery yang lebih memudahkan kita< dan lebih praktis</p>
+  </div>
+</div>
 </div>
 </div>
 </section>

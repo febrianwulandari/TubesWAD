@@ -48,25 +48,11 @@ class AdminLogin extends Controller
             'password' => 'required'
         ]);
 
-        $admins = Admin::where('email', $request->email)->first();
-
-        // if ($admins[0]->password == $request->password){
-        if ($admins->password == $request->password){
-            
-            $data = $request->session()->all();
-            $request->session()->put('nama', $data['name']);
-            // return $admins;
-            // exit();
-            // $request->session()->put('name', $admins->nama_admin);
-            // $request->session()->regenerate();
-
-            return redirect('/homeAdmin');
+        if (Auth::guard('admin')->attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/homeAdmin');
         }
-
-        return back()->withErrors([
-            'email' => 'Login Failed',
-        ]);
-        // dd('berhasil login!');
+        return back()->with('gagal', 'Email atau password tidak cocok');
     }
 
     /**

@@ -5,10 +5,12 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\bookings;
+use Illuminate\Support\Facades\Auth;
 use App\Models\layanan;
 
 class bookingAdminController extends Controller
 {
+
     public function index()
     {
         $bookings = bookings::all();

@@ -7,6 +7,7 @@ use App\Http\Controllers\layananPelanggan;
 use App\Http\Controllers\register;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminLogin;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PelangganAdmin;
 use App\Http\Controllers\RiwayatAdminController;
 use App\Http\Controllers\RiwayatController;
@@ -49,6 +50,7 @@ Route::get('/orders',[bookingAdminController::class, 'orders']);
 Route::get('/orders/hapus/{id}',[bookingAdminController::class, 'hapus']);
 Route::put('/orders/update',[bookingAdminController::class, 'updateDataStatus']);
 Route::get('/riwayat',[RiwayatAdminController::class,'index']);
+Route::put('/updateAkun',[HomeController::class,'updateAkun']);
 
 // User
 Route::get('/register',[register::class, 'index']);

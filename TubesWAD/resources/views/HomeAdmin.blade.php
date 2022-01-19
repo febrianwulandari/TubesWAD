@@ -4,7 +4,7 @@
 <br>
 <div class="col-md-12" style="margin-left: 20px; margin-top:60px">
 <p style="color: #164D74; font-size:28px; font-weight:bolder; margin-left:90px;">Dashboard Admin </p>
-<p style="color: #164D74; font-size:18px; font-weight:lighter; margin-left:90px;">Hello selamat datang ... sebagai admin</p>
+<p style="color: #164D74; font-size:18px; font-weight:lighter; margin-left:90px;">Hello selamat datang {{auth::guard('admin')->user()->nama_admin}} sebagai admin</p>
 <div class="row">
 <div class="col-md-3" style="background-color:#68deda;height:140px;margin-left:100px; border-radius:5px">
 <table>

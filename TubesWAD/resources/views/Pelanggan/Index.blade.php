@@ -24,7 +24,7 @@
       <li><a href="/layananPelanggan" class="nav-link px-2 link-secondary {{( $active === "layanan" ) ? ' active fw-bold ' : '' }}">LAYANAN</a></li>
       <li><a href="/pelanggan/booking" class="nav-link px-2 link-secondary {{( $active === "orders" ) ? ' active fw-bold ' : '' }}"  >ORDERS</a></li>
       <li><a href="/pelanggan/riwayat" class="nav-link px-2 link-secondary {{( $active === "riwayat" ) ? ' active fw-bold ' : '' }}" style="margin-right: 40px;" >RIWAYAT</a></li>
-      <img src=" {{asset('asset/1.png')}}" alt="" width="40" height="40" class="d-inline-block align-text-top">
+      <img src=" {{asset('asset/1.png')}}" data-bs-toggle="modal" data-bs-target="#exampleModal"  alt="" width="40" height="40" class="d-inline-block align-text-top">
       <li><a href="" class="nav-link px-2 link-dark" style="font-weight: bold;color: #51758E">{{Auth::user()->name}}</a></li>
 
       <li><a href="/logout" type="button" class="btn btn-primary" style="background-color: #01AFD0; margin-left: 20px; width: 150px">Logout</a></li>
@@ -97,5 +97,49 @@
   </div>
  <br>
 </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Detail Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      @if (session('sukses'))
+            <div class="alert-success"  style=" width: 83%; height: 50px; margin-left: 60px;">
+                <p>{{ session('sukses') }}</p>
+            </div>
+          @endif
+          @if (session('gagal'))
+          <div class="alert-danger"  style=" width: 83%; height: 50px; margin-left: 60px;">
+            <p>{{ session('gagal') }}</p>
+          </div>
+          @endif
+      <form action="/updateAkun" method="POST">
+      <div class="modal-body">
+          @csrf
+          @METHOD('PUT')
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" value="{{auth()->user()->email}}" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password Lama</label>
+            <input type="password" name="password_lama" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password Baru</label>
+            <input type="password" name="password_baru" class="form-control" id="exampleFormControlInput1">
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

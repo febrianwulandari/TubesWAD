@@ -52,13 +52,13 @@
     <br>
     <p style="color: #164D74; font-size:30px;font-weight: semibold; margin-top:60px">Login Admin</p>
 
-    @if(session()->has('success'))
+    @if(session()->has('sukses'))
     <div class="alert alert-success" role="alert">
         {{ session('success') }}
     </div>
     @endif
 
-    @if(session()->has('loginErrors'))
+    @if(session()->has('eror'))
     <div class="alert alert-danger" role="alert">
         {{ session('loginErrors') }}
     </div>
